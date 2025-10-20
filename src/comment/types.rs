@@ -35,7 +35,7 @@ pub struct Comment {
 
     pub floor: Option<u64>,
     pub show_follow: Option<bool>,
-    pub card_label: Option<CardLabel>,
+    pub card_label: Option<Vec<CardLabel>>,
     pub rpid_str: Option<String>,
     pub root_str: Option<String>,
     pub parent_str: Option<String>,
@@ -205,7 +205,7 @@ pub struct Picture {
     pub img_src: String,
     pub img_width: u64,
     pub img_height: u64,
-    pub img_size: u64, // KB
+    pub img_size: f64, // KB
 }
 
 /// 折叠信息
@@ -233,7 +233,7 @@ pub struct CardLabel {
     pub label_color_day: String,
     pub label_color_night: String,
     pub image: Option<String>,
-    pub r#type: Option<String>,
+    pub r#type: Option<u64>,
     pub background: Option<String>,
     pub background_width: Option<u64>,
     pub background_height: Option<u64>,
