@@ -284,7 +284,7 @@ pub struct Cursor {
 /// 评论区顶部信息
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Upper {
-    pub mid: u32,
+    pub mid: u64, // UP 主 mid
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
