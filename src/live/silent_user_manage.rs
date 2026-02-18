@@ -50,6 +50,7 @@ impl BpiClient {
             ("room_id", room_id.to_string()),
             ("tuid", tuid.to_string()),
             ("mobile_app", "web".to_string()),
+            ("type", "1".to_string()),
             ("hour", hour.to_string()),
             ("csrf_token", csrf.clone()),
             ("csrf", csrf)
