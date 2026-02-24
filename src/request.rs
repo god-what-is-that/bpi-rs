@@ -74,8 +74,8 @@ impl BilibiliRequest for RequestBuilder {
             {
                 let json_str = String::from_utf8_lossy(&bytes);
                 let error_pos = e.column().saturating_sub(1);
-                let start = error_pos.saturating_sub(25);
-                let end = (error_pos + 25).min(json_str.len());
+                let start = json_str.floor_char_boundary(error_pos.saturating_sub(25));
+                let end = json_str.floor_char_boundary((error_pos + 25).min(json_str.len()));
                 let context = &json_str[start..end];
 
                 tracing::error!(
